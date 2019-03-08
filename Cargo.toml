@@ -1,0 +1,21 @@
+[package]
+name = "gibberish"
+version = "0.1.0"
+authors = ["Ben Snow <balintbence97@gmail.com>"]
+edition = "2018"
+
+description = "Turns files into gibberish and back again"
+readme = "README.md"
+license = "MIT"
+
+repository = "https://github.com/b3nsn0w/gibberish"
+
+[dependencies]
+clap = "2.32.0"
+exitfailure = "0.5.1"
+failure = "0.1.5"
+msgpack_simple = "1.0.0"
+quicli = "0.4"
+regex = "1.1.2"
+rpassword = "2.1.0"
+sodiumoxide = "0.2.1"
