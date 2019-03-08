@@ -79,7 +79,11 @@ fn main() -> CliResult {
         let ciphertext = &file[pwhash::SALTBYTES + secretbox::NONCEBYTES ..];
 
         let password = if matches.is_present("passphrase") {
-            rpassword::read_password_from_tty(Some("Passphrase: ")).unwrap()
+            let pw = rpassword::read_password_from_tty(Some("Passphrase: ")).unwrap();
+            #[cfg(target_os = "windows")]
+            println!();
+
+            pw
         } else {
             orig_ext
         };
@@ -117,7 +121,12 @@ fn main() -> CliResult {
         let password = if matches.is_present("passphrase") {
             loop {
                 let password1 = rpassword::read_password_from_tty(Some("Passphrase: ")).unwrap();
+                #[cfg(target_os = "windows")]
+                println!();
+
                 let password2 = rpassword::read_password_from_tty(Some("Confirm passphrase: ")).unwrap();
+                #[cfg(target_os = "windows")]
+                println!();
 
                 if password1 == password2 {
                     break password1;
