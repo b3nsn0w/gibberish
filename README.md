@@ -2,6 +2,20 @@ Turn files into gibberish, then de-gibberish them to get back the original file.
 Also known as encryption, but we don't want to get pretentious here, plus
 gibberish isn't really secret if you don't set a password.
 
+# Motivation
+
+Gibberish is intended to be a clean and simple way of exchanging files across
+automated filters. Say, you wanted to send a `meme.gif` file to someone, but the
+chat app you use disallows gif files for some weird reason, or processes them
+and destroys the quality in the process. Perhaps you want to send a `photos.rar`
+archive of the photos from your last trip, but the app disallows rar files in
+fear of someone putting a virus in them. We've all seen these filters, and while
+they clearly have some use, they often go way too far and are a hassle.
+
+With gibberish, you can easily solve this issue. You can just turn a file into
+gibberish, and then your recipient can de-gibberish the file. Simple, clean,
+easy. No need for password-locked rar files or anything crazy and complex.
+
 # Installation
 
 If you got [the Rust tools](https://rustup.rs/) installed, you can use Cargo:
@@ -83,20 +97,6 @@ password:
     $ gibberish -d -p hidden.xlsx
     Passphrase:
     Decoded gibberish to hidden.png
-
-# Motivation
-
-Gibberish is intended to be a clean and simple way of exchanging files across
-automated filters. Say, you wanted to send a `meme.gif` file to someone, but the
-chat app you use disallows gif files for some weird reason, or processes them
-and destroys the quality in the process. Perhaps you want to send a `photos.rar`
-archive of the photos from your last trip, but the app disallows rar files in
-fear of someone putting a virus in them. We've all seen these filters, and while
-they clearly have some use, they often go way too far and are a hassle.
-
-With gibberish, you can easily solve this issue. You can just turn a file into
-gibberish, and then your recipient can de-gibberish the file. Simple, clean,
-easy. No need for password-locked rar files or anything crazy and complex.
 
 # File format
 
