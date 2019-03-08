@@ -32,7 +32,7 @@ Engibberish files with the `gibberish` command:
     $ gibberish file.png
     Gibberish written to file.gibberish
 
-(Is 'engibberish' this even a word? Well, now it certainly is...)
+(Is 'engibberish' even a word? Well, now it certainly is...)
 
 Then de-gibberish them with `gibberish -d`:
 
